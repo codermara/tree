@@ -22,13 +22,13 @@ jobs:
           dotnet-version: '6.0.x'  # Укажите нужную версию .NET
 
       - name: Restore dependencies
-        run: dotnet restore /AST/AST/AST.csproj
+        run: dotnet restore AST/AST.csproj
 
       - name: Build
-        run: dotnet build /Test/Test/Test.csproj--configuration Release
+        run: dotnet build Test/Test/Test.csproj --configuration Release
 
       - name: Run tests
-        run: dotnet test  /Test/Test/Test.csproj --configuration Release --no-build --verbosity normal
+        run: dotnet test Test/Test/Test.csproj --configuration Release --no-build --verbosity normal
 
       - name: Publish
-        run: dotnet publish --configuration Release --output ./output
+        run: dotnet publish Test/Test/Test.csproj --configuration Release --output ./output
