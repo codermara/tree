@@ -25,10 +25,10 @@ jobs:
         run: dotnet restore AST/AST/AST.csproj
 
       - name: Build
-        run: dotnet build Test/Test/Test.csproj --configuration Release
+        run: dotnet build Test/Test/Test/Test.csproj --configuration Release
 
       - name: Run tests
-        run: dotnet test Test/Test/Test.csproj --configuration Release --no-build --verbosity normal
+        run: dotnet test Test/Test/Test/Test.csproj --configuration Release --no-build --verbosity normal
 
       - name: Publish
-        run: dotnet publish Test/Test/Test.csproj --configuration Release --output ./output
+        run: dotnet publish Test/Test/Test/Test.csproj --configuration Release --output ./output
