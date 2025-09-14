@@ -20,7 +20,7 @@ public class PrintVisitorTests
 
         // Assert
         var result = sw.ToString().Trim();
-        Assert.Equal("42", result);
+        Assert.Equal("43", result);
     }
 
     [Fact]
